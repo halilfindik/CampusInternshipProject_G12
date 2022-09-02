@@ -59,6 +59,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//div[@class='ng-star-inserted']//button)[2]")
     private WebElement approveDeleteButton;
 
+    // GIT DENEME AMAÇLI
 
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
