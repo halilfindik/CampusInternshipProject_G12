@@ -1,10 +1,10 @@
-Feature: Add-Edit-Delete Position Categories Under Human Resources Setup
+Feature: Add-Edit-Delete Positions Under Human Resources Setup
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Position Categories
+  Scenario: Add Positions
     Given Click on the element in the Left Navigation Panel
       | humanResources |
       | setupThree     |
@@ -22,7 +22,7 @@ Feature: Add-Edit-Delete Position Categories Under Human Resources Setup
 
     Then Success message should be displayed
 
-  Scenario: Edit Position Categories
+  Scenario: Edit Positions
     Given Click on the element in the Left Navigation Panel
       | humanResources |
       | setupThree     |
@@ -44,7 +44,7 @@ Feature: Add-Edit-Delete Position Categories Under Human Resources Setup
 
     Then Success message should be displayed
 
-  Scenario: Delete Position Categories
+  Scenario: Delete Positions
     Given Click on the element in the Left Navigation Panel
       | humanResources |
       | setupThree     |
