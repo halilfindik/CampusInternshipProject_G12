@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.Gwd;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -71,6 +72,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper ng')])[2]")
     private WebElement arrowTwo;
 
+    @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper ng')])[3]")
+    private WebElement arrowThree;
+
     @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
     private WebElement dropDownOptionOne;
 
@@ -94,6 +98,9 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "(//mat-option[@role='option']/span)[8]")
     private WebElement dropDownOptionEight;
+
+    @FindBy(xpath = "//*[contains(@class,'bounding')]")
+    private WebElement transparentBackdrop;
 
     @FindBy(xpath = "//ms-text-field//input")
     private WebElement PotitionCategoriesEditInputName;
@@ -137,6 +144,8 @@ public class DialogContent extends Parent {
             case "dropDownOptionSix"    : myElement=dropDownOptionSix; break;
             case "dropDownOptionSeven"  : myElement=dropDownOptionSeven; break;
             case "dropDownOptionEight"  : myElement=dropDownOptionEight; break;
+            case "arrowThree"           : myElement=arrowThree; break;
+            case "transparentBackdrop"  : myElement=transparentBackdrop; break;
         }
         clickFunction(myElement);
     }
@@ -164,6 +173,21 @@ public class DialogContent extends Parent {
         findAndClick("searchButton");
         waitUntilLoading();
         findAndClick("editButton");
+    }
+    public void findAndClickTab(String strElement) {
+        switch (strElement)
+        {
+            case "dropDownOptionFour" : myElement = dropDownOptionFour; break;
+        }
+        myElement.sendKeys(Keys.TAB);
+    }
+
+    public void returnToForm(String strElement) {
+        switch (strElement)
+        {
+            case "arrowThree" : myElement = arrowThree; break;
+        }
+        returnToElement(myElement);
     }
 
 }

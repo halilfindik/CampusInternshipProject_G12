@@ -39,6 +39,10 @@ public class Parent {
         JavascriptExecutor js=(JavascriptExecutor) Gwd.getDriver();
         js.executeScript("arguments[0].scrollIntoView();",element);
     }
+    public void returnToElement(WebElement element) {
+        JavascriptExecutor js=(JavascriptExecutor) Gwd.getDriver();
+        js.executeScript("return document.body.innerHTML",element);
+    }
 
     public void waitUntilClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Gwd.getDriver(), dr);
