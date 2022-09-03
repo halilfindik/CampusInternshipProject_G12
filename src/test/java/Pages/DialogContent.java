@@ -26,11 +26,17 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
     private WebElement nameInput;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInput;
+
     @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
     private WebElement shortName;
 
     @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'GENERAL.BUTTON.ADD')]//button")
+    private WebElement addButtonAlternative;
 
     @FindBy(xpath="//ms-save-button//button")
     private WebElement saveButton;
@@ -59,6 +65,36 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//div[@class='ng-star-inserted']//button)[2]")
     private WebElement approveDeleteButton;
 
+    @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper ng')])[1]")
+    private WebElement arrowOne;
+
+    @FindBy(xpath = "(//*[contains(@class,'mat-select-arrow-wrapper ng')])[2]")
+    private WebElement arrowTwo;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[1]")
+    private WebElement dropDownOptionOne;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[2]")
+    private WebElement dropDownOptionTwo;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[3]")
+    private WebElement dropDownOptionThree;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[4]")
+    private WebElement dropDownOptionFour;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[5]")
+    private WebElement dropDownOptionFive;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[6]")
+    private WebElement dropDownOptionSix;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[7]")
+    private WebElement dropDownOptionSeven;
+
+    @FindBy(xpath = "(//mat-option[@role='option']/span)[8]")
+    private WebElement dropDownOptionEight;
+
     // GIT DENEME AMAÇLI
 
     WebElement myElement;
@@ -70,6 +106,7 @@ public class DialogContent extends Parent {
             case "shortName"            : myElement=shortName; break;
             case "nameInput"            : myElement=nameInput; break;
             case "searchInput"          : myElement=searchInput; break;
+            case "codeInput"            : myElement=codeInput; break;
         }
         sendKeysFunction(myElement, value);
     }
@@ -85,6 +122,17 @@ public class DialogContent extends Parent {
             case "searchButton"         : myElement=searchButton; break;
             case "deleteButton"         : myElement=deleteButton; break;
             case "approveDeleteButton"  : myElement=approveDeleteButton; break;
+            case "addButtonAlternative" : myElement=addButtonAlternative; break;
+            case "arrowOne"             : myElement=arrowOne; break;
+            case "arrowTwo"             : myElement=arrowTwo; break;
+            case "dropDownOptionOne"    : myElement=dropDownOptionOne; break;
+            case "dropDownOptionTwo"    : myElement=dropDownOptionTwo; break;
+            case "dropDownOptionThree"  : myElement=dropDownOptionThree; break;
+            case "dropDownOptionFour"   : myElement=dropDownOptionFour; break;
+            case "dropDownOptionFive"   : myElement=dropDownOptionFive; break;
+            case "dropDownOptionSix"    : myElement=dropDownOptionSix; break;
+            case "dropDownOptionSeven"  : myElement=dropDownOptionSeven; break;
+            case "dropDownOptionEight"  : myElement=dropDownOptionEight; break;
         }
         clickFunction(myElement);
     }
