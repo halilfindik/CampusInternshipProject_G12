@@ -95,6 +95,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//mat-option[@role='option']/span)[8]")
     private WebElement dropDownOptionEight;
 
+    @FindBy(xpath = "//ms-text-field//input")
+    private WebElement PotitionCategoriesEditInputName;
+
     // GIT DENEME AMAÇLI
 
     WebElement myElement;
@@ -107,6 +110,7 @@ public class DialogContent extends Parent {
             case "nameInput"            : myElement=nameInput; break;
             case "searchInput"          : myElement=searchInput; break;
             case "codeInput"            : myElement=codeInput; break;
+            case "PotitionCategoriesEditInputName": myElement=PotitionCategoriesEditInputName; break;
         }
         sendKeysFunction(myElement, value);
     }
