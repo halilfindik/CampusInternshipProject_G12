@@ -2,12 +2,15 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 public class CMP_17_Steps {
@@ -53,5 +56,26 @@ public class CMP_17_Steps {
         for (int i=0; i<listElement.size(); i++) {
             dialogContent.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
         }
+    }
+
+    @And("Click TAB on the element in the Dialog Content")
+    public void clickTABOnTheElementInTheDialogContent() {
+        dialogContent.findAndClickTab("dropDownOptionFour");
+    }
+    @And("Click ROBOT TAB on the element in the Dialog Content")
+    public void clickROBOTTABOnTheElementInTheDialogContent()  {
+        Robot robot=null;
+        try {
+            robot=new Robot();
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+        robot.keyPress(KeyEvent.VK_TAB);
+
+    }
+
+    @And("Return to the form on the element in the Dialog Content")
+    public void returnToTheFormOnTheElementInTheDialogContent() {
+        dialogContent.returnToForm("arrowThree");
     }
 }
