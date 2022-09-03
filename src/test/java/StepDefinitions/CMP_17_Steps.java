@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
-public class CMP_1_Steps {
+public class CMP_17_Steps {
     LeftNav leftNav=new LeftNav();
     DialogContent dialogContent=new DialogContent();
 
