@@ -102,6 +102,18 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[contains(@class,'bounding')]")
     private WebElement transparentBackdrop;
 
+    @FindBy(xpath = "//*[@class='mat-select-arrow ng-tns-c93-546']")
+    private WebElement locationType;
+
+    @FindBy(xpath = "//ms-integer-field//input")
+    private WebElement Capactiy;
+
+
+
+
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
         switch (strElement)
@@ -112,6 +124,10 @@ public class DialogContent extends Parent {
             case "nameInput"            : myElement=nameInput; break;
             case "searchInput"          : myElement=searchInput; break;
             case "codeInput"            : myElement=codeInput; break;
+            case "locationType"         : myElement=locationType; break;
+            case "Capactiy"             : myElement=Capactiy; break;
+
+
         }
         sendKeysFunction(myElement, value);
     }
@@ -172,6 +188,7 @@ public class DialogContent extends Parent {
         switch (strElement)
         {
             case "dropDownOptionFour" : myElement = dropDownOptionFour; break;
+            case "locationType" : myElement = locationType; break;
         }
         myElement.sendKeys(Keys.TAB);
     }
