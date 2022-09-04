@@ -5,7 +5,7 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Position Categories
+  Scenario: Add Document Type
     Given Click on the element in the Left Navigation Panel
       | setupOne      |
       | parameters    |
@@ -16,7 +16,6 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
 
     And User sends the keys in the Dialog Content
       | nameInput | Lise Diplomasi |
-
 
     And Click on the element in the Dialog Content
       | arrowThree         |
@@ -29,8 +28,7 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
 
     Then Success message should be displayed
 
-
-  Scenario: Edit Position Categories
+  Scenario: Edit Document Type
     Given Click on the element in the Left Navigation Panel
       | setupOne      |
       | parameters    |
@@ -50,11 +48,12 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
       | saveButton |
     Then Success message should be displayed
 
-  Scenario: Delete Position Categories
+  Scenario: Delete Document Type
     Given Click on the element in the Left Navigation Panel
       | setupOne      |
       | parameters    |
       | documentTypes |
+
     When User searches for the desired item in the Dialog Content
       | searchInput | Universite Diplomasi |
 
@@ -62,6 +61,5 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
       | searchButton        |
       | deleteButton        |
       | approveDeleteButton |
-
 
     Then Success message should be displayed

@@ -5,17 +5,17 @@ Feature: Add-Edit-Delete Bank Accounts under Parameters Setup
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Position Categories
+  Scenario: Add Bank Accounts
     Given Click on the element in the Left Navigation Panel
 
     Then Success message should be displayed
 
-  Scenario: Edit Position Categories
+  Scenario: Edit Bank Accounts
     Given Click on the element in the Left Navigation Panel
 
     Then Success message should be displayed
 
-  Scenario: Delete Position Categories
+  Scenario: Delete Bank Accounts
     Given Click on the element in the Left Navigation Panel
 
     Then Success message should be displayed
