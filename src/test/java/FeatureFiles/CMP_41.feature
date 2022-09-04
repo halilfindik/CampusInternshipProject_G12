@@ -5,7 +5,7 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Position Categories
+  Scenario: Add Discounts
     Given Click on the element in the Left Navigation Panel
       | setupOne   |
       | parameters |
@@ -24,7 +24,7 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
 
     Then Success message should be displayed
 
-  Scenario: Edit Position Categories
+  Scenario: Edit Discounts
     Given Click on the element in the Left Navigation Panel
       | setupOne     |
       | parameters   |
@@ -45,7 +45,7 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
 
     Then Success message should be displayed
 
-  Scenario: Delete Position Categories
+  Scenario: Delete Discounts
     Given Click on the element in the Left Navigation Panel
       | setupOne     |
       | parameters   |

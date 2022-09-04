@@ -40,6 +40,7 @@ public class LeftNav extends Parent{
 
     @FindBy(xpath="//span[text()='Document Types']")
     private WebElement documentTypes;
+
     @FindBy(xpath = "(//*[text()='Position Categories'])[1]")
     private WebElement positionCategories;
 
@@ -48,6 +49,33 @@ public class LeftNav extends Parent{
 
     @FindBy(xpath="(//span[text()='Discounts'])[1]")
     private WebElement discounts;
+
+    @FindBy(xpath = "//*[text()='Education']")
+    private WebElement education;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[4]")
+    private WebElement setupFour;
+
+    @FindBy(xpath = "//*[text()='Subject Categories']")
+    private WebElement subjectCategories;
+
+    @FindBy(xpath = "//*[text()='Attestations']")
+    private WebElement attestations;
+
+    @FindBy(xpath="//span[text()='School Setup']")
+    private WebElement schoolSetup;
+
+    @FindBy(xpath="//span[text()='Locations']")
+    private WebElement locations;
+
+    @FindBy(xpath="//span[text()='Departments']")
+    private WebElement departments;
+
+    @FindBy(xpath="//span[text()='Nationalities']")
+    private WebElement nationalities;
+
+    @FindBy(xpath="//span[text()='Grade Levels']")
+    private WebElement gradeLevels;
 
 
     WebElement myElement;
@@ -66,6 +94,19 @@ public class LeftNav extends Parent{
             case "bankAccounts"     : myElement=bankAccounts; break;
             case "discounts"        : myElement=discounts; break;
 
+            case "setupOne"          : myElement=setupOne; break;
+            case "parameters"        : myElement=parameters; break;
+            case "countries"         : myElement=countries; break;
+            case "setupTwo"          : myElement=setupTwo; break;
+            case "setupThree"        : myElement=setupThree; break;
+            case "humanResources"    : myElement=humanResources; break;
+            case "employees"         : myElement=employees; break;
+            case "positions"         : myElement=positions; break;
+            case "fields"            : myElement=fields; break;
+            case "documentTypes"     : myElement=documentTypes; break;
+            case "education"         : myElement=education; break;
+            case "setupFour"         : myElement=setupFour; break;
+            case "subjectCategories" : myElement=subjectCategories; break;
             case "positionCategories": myElement=positionCategories; break;
         }
         clickFunction(myElement);

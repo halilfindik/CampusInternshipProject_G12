@@ -17,7 +17,6 @@ Feature: Add-Edit-Delete Positions Under Human Resources Setup
     And User sends the keys in the Dialog Content
       | nameInput | Manager1 |
 
-
     And Click on the element in the Dialog Content
       | saveButton |
 
@@ -30,7 +29,7 @@ Feature: Add-Edit-Delete Positions Under Human Resources Setup
       | positionCategories |
 
     When User searches for the desired item in the Dialog Content
-      | PotitionCategoriesEditInputName | Manager1 |
+      | searchInput | Manager1 |
 
     And Click on the element in the Dialog Content
       | searchButton |
@@ -38,7 +37,6 @@ Feature: Add-Edit-Delete Positions Under Human Resources Setup
 
     And User sends the keys in the Dialog Content
       | nameInput | IT Manager |
-
 
     And Click on the element in the Dialog Content
       | saveButton |
@@ -52,7 +50,7 @@ Feature: Add-Edit-Delete Positions Under Human Resources Setup
       | positionCategories |
 
     When User searches for the desired item in the Dialog Content
-      | PotitionCategoriesEditInputName | IT Manager |
+      | searchInput | IT Manager |
 
     And Click on the element in the Dialog Content
       | searchButton        |

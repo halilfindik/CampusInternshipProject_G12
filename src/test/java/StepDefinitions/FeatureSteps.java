@@ -2,7 +2,6 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
-import Pages.Parent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,7 +12,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
-public class CMP_17_Steps {
+public class FeatureSteps {
     LeftNav leftNav=new LeftNav();
     DialogContent dialogContent=new DialogContent();
 
