@@ -93,17 +93,6 @@ public class LeftNav extends Parent{
             case "documentTypes"    : myElement=documentTypes; break;
             case "bankAccounts"     : myElement=bankAccounts; break;
             case "discounts"        : myElement=discounts; break;
-
-            case "setupOne"          : myElement=setupOne; break;
-            case "parameters"        : myElement=parameters; break;
-            case "countries"         : myElement=countries; break;
-            case "setupTwo"          : myElement=setupTwo; break;
-            case "setupThree"        : myElement=setupThree; break;
-            case "humanResources"    : myElement=humanResources; break;
-            case "employees"         : myElement=employees; break;
-            case "positions"         : myElement=positions; break;
-            case "fields"            : myElement=fields; break;
-            case "documentTypes"     : myElement=documentTypes; break;
             case "education"         : myElement=education; break;
             case "setupFour"         : myElement=setupFour; break;
             case "subjectCategories" : myElement=subjectCategories; break;

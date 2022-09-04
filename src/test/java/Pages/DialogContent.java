@@ -133,12 +133,7 @@ public class DialogContent extends Parent {
             case "integrationCodeInput"            : myElement=integrationCodeInput; break;
             case "descriptionInput"                : myElement=descriptionInput; break;
             case "numericInput"                    : myElement=numericInput; break;
-            case "username"             : myElement=username; break;
-            case "password"             : myElement=password; break;
-            case "shortName"            : myElement=shortName; break;
-            case "nameInput"            : myElement=nameInput; break;
-            case "searchInput"          : myElement=searchInput; break;
-            case "codeInput"            : myElement=codeInput; break;
+
         }
         sendKeysFunction(myElement, value);
     }

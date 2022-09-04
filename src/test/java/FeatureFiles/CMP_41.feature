@@ -26,9 +26,9 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
 
   Scenario: Edit Discounts
     Given Click on the element in the Left Navigation Panel
-      | setupOne     |
-      | parameters   |
-      | discounts |
+      | setupOne   |
+      | parameters |
+      | discounts  |
 
     When User searches for the desired item in the Dialog Content
       | searchInput | 15% for 2nd child |
@@ -38,7 +38,7 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
       | editButton   |
 
     And User sends the keys in the Dialog Content
-      | nameInput | Hi 20% for 2nd child |
+      | descriptionInput | Hi 20% for 2nd child |
 
     And Click on the element in the Dialog Content
       | saveButton |
@@ -47,9 +47,9 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
 
   Scenario: Delete Discounts
     Given Click on the element in the Left Navigation Panel
-      | setupOne     |
-      | parameters   |
-      | discounts |
+      | setupOne   |
+      | parameters |
+      | discounts  |
 
     When User searches for the desired item in the Dialog Content
       | searchInput | Hi 20% for 2nd child |
@@ -58,3 +58,5 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
       | searchButton        |
       | deleteButton        |
       | approveDeleteButton |
+
+    Then Success message should be displayed

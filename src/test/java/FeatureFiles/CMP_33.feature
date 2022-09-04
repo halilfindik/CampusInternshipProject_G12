@@ -62,3 +62,5 @@ Feature: Add-Edit-Delete Bank Accounts under Parameters Setup
       | searchButton        |
       | deleteButton        |
       | approveDeleteButton |
+
+    Then Success message should be displayed

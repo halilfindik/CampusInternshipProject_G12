@@ -5,7 +5,7 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Position Categories
+  Scenario: Add Document Categories
     Given Click on the element in the Left Navigation Panel
       | setupOne      |
       | parameters    |
