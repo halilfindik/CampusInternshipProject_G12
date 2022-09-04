@@ -7,15 +7,54 @@ Feature: Add-Edit-Delete Discounts under Parameters Setup
 
   Scenario: Add Position Categories
     Given Click on the element in the Left Navigation Panel
+      | setupOne   |
+      | parameters |
+      | discounts  |
+
+    When Click on the element in the Dialog Content
+      | addButton |
+
+    And User sends the keys in the Dialog Content
+      | descriptionInput | 15% for 2nd child |
+      | codeInput        | MLT44             |
+      | numericInput     | 44                |
+
+    And Click on the element in the Dialog Content
+      | saveButton |
 
     Then Success message should be displayed
 
   Scenario: Edit Position Categories
     Given Click on the element in the Left Navigation Panel
+      | setupOne     |
+      | parameters   |
+      | discounts |
+
+    When User searches for the desired item in the Dialog Content
+      | searchInput | 15% for 2nd child |
+
+    And Click on the element in the Dialog Content
+      | searchButton |
+      | editButton   |
+
+    And User sends the keys in the Dialog Content
+      | nameInput | Hi 20% for 2nd child |
+
+    And Click on the element in the Dialog Content
+      | saveButton |
 
     Then Success message should be displayed
 
   Scenario: Delete Position Categories
     Given Click on the element in the Left Navigation Panel
+      | setupOne     |
+      | parameters   |
+      | discounts |
 
-    Then Success message should be displayed
+    When User searches for the desired item in the Dialog Content
+      | searchInput | Hi 20% for 2nd child |
+
+    And Click on the element in the Dialog Content
+      | searchButton        |
+      | deleteButton        |
+      | approveDeleteButton |

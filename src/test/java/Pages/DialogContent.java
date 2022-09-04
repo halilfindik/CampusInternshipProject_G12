@@ -105,19 +105,34 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field//input")
     private WebElement PotitionCategoriesEditInputName;
 
-    // GIT DENEME AMAÇLI
+    @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
+    private WebElement ibanInput;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='integrationCode']//input")
+    private WebElement integrationCodeInput;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")
+    private WebElement descriptionInput;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    private WebElement numericInput;
+
 
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
         switch (strElement)
         {
-            case "username"             : myElement=username; break;
-            case "password"             : myElement=password; break;
-            case "shortName"            : myElement=shortName; break;
-            case "nameInput"            : myElement=nameInput; break;
-            case "searchInput"          : myElement=searchInput; break;
-            case "codeInput"            : myElement=codeInput; break;
-            case "PotitionCategoriesEditInputName": myElement=PotitionCategoriesEditInputName; break;
+            case "username"                        : myElement=username; break;
+            case "password"                        : myElement=password; break;
+            case "shortName"                       : myElement=shortName; break;
+            case "nameInput"                       : myElement=nameInput; break;
+            case "searchInput"                     : myElement=searchInput; break;
+            case "codeInput"                       : myElement=codeInput; break;
+            case "PotitionCategoriesEditInputName" : myElement=PotitionCategoriesEditInputName; break;
+            case "ibanInput"                       : myElement=ibanInput; break;
+            case "integrationCodeInput"            : myElement=integrationCodeInput; break;
+            case "descriptionInput"                : myElement=descriptionInput; break;
+            case "numericInput"                    : myElement=numericInput; break;
         }
         sendKeysFunction(myElement, value);
     }

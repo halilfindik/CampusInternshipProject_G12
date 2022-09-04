@@ -17,7 +17,6 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
     And User sends the keys in the Dialog Content
       | nameInput | Lise Diplomasi |
 
-
     And Click on the element in the Dialog Content
       | arrowThree         |
       | dropDownOptionFour |
@@ -28,7 +27,6 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
       | saveButton |
 
     Then Success message should be displayed
-
 
   Scenario: Edit Position Categories
     Given Click on the element in the Left Navigation Panel
@@ -48,6 +46,7 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
 
     And Click on the element in the Dialog Content
       | saveButton |
+
     Then Success message should be displayed
 
   Scenario: Delete Position Categories
@@ -55,6 +54,7 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
       | setupOne      |
       | parameters    |
       | documentTypes |
+
     When User searches for the desired item in the Dialog Content
       | searchInput | Universite Diplomasi |
 
@@ -62,6 +62,5 @@ Feature: Add-Edit-Delete Document Types under Parameters Setup
       | searchButton        |
       | deleteButton        |
       | approveDeleteButton |
-
 
     Then Success message should be displayed
