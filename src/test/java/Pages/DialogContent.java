@@ -130,6 +130,16 @@ public class DialogContent extends Parent {
 
 
 
+
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    private WebElement NataddButton;
+
+
+
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
         switch (strElement)
@@ -144,12 +154,8 @@ public class DialogContent extends Parent {
             case "Capactiy"             : myElement=Capactiy; break;
 
 
-            case "username"                        : myElement=username; break;
-            case "password"                        : myElement=password; break;
-            case "shortName"                       : myElement=shortName; break;
-            case "nameInput"                       : myElement=nameInput; break;
-            case "searchInput"                     : myElement=searchInput; break;
-            case "codeInput"                       : myElement=codeInput; break;
+
+
             case "PotitionCategoriesEditInputName" : myElement=PotitionCategoriesEditInputName; break;
             case "ibanInput"                       : myElement=ibanInput; break;
             case "integrationCodeInput"            : myElement=integrationCodeInput; break;
