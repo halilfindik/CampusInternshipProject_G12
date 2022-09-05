@@ -1,62 +1,56 @@
-Feature: Add-Edit-Delete Document Types under Parameters Setup
+Feature: Add-Edit-Delete Attestations under Human Resources Setup
 
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Document Categories
+  Scenario: Add Attestations
     Given Click on the element in the Left Navigation Panel
-      | setupOne      |
-      | parameters    |
-      | documentTypes |
+      | humanResources |
+      | setupThree     |
+      | Attestations   |
 
     When Click on the element in the Dialog Content
       | addButton |
 
     And User sends the keys in the Dialog Content
-      | nameInput | Lise Diplomasi |
-
-    And Click on the element in the Dialog Content
-      | arrowThree         |
-      | dropDownOptionFour |
-
-    And Click ROBOT TAB on the element in the Dialog Content
+      | nameInput | Sari Cizmeli Mehmet Aga |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Edit Document Categories
+  Scenario: Edit Attestations
     Given Click on the element in the Left Navigation Panel
-      | setupOne      |
-      | parameters    |
-      | documentTypes |
+      | humanResources |
+      | setupThree     |
+      | Attestations   |
 
     When User searches for the desired item in the Dialog Content
-      | searchInput | Lise Diplomasi |
+      | searchInput | Sari Cizmeli Mehmet Aga |
 
     And Click on the element in the Dialog Content
       | searchButton |
       | editButton   |
 
     And User sends the keys in the Dialog Content
-      | nameInput | Universite Diplomasi |
+      | nameInput | Sari Paltolu Mehmet Aga |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Delete Document Categories
+  Scenario: Delete Attestations
     Given Click on the element in the Left Navigation Panel
-      | setupOne      |
-      | parameters    |
-      | documentTypes |
+      | humanResources |
+      | setupThree     |
+      | Attestations   |
 
     When User searches for the desired item in the Dialog Content
-      | searchInput | Universite Diplomasi |
+      | searchInput | Sari Paltolu Mehmet Aga |
 
     And Click on the element in the Dialog Content
       | searchButton        |
