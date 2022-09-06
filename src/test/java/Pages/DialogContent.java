@@ -118,16 +118,44 @@ public class DialogContent extends Parent {
     private WebElement numericInput;
 
 
+    @FindBy(xpath = "//*[@class='mat-select-arrow ng-tns-c93-546']")
+    private WebElement locationType;
+
+    @FindBy(xpath = "//ms-integer-field//input")
+    private WebElement Capactiy;
+
+
+
+
+
+
+
+
+
+    @FindBy(xpath="//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    private WebElement NataddButton;
+
+
+
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
         switch (strElement)
         {
-            case "username"                        : myElement=username; break;
-            case "password"                        : myElement=password; break;
-            case "shortName"                       : myElement=shortName; break;
-            case "nameInput"                       : myElement=nameInput; break;
-            case "searchInput"                     : myElement=searchInput; break;
-            case "codeInput"                       : myElement=codeInput; break;
+            case "username"             : myElement=username; break;
+            case "password"             : myElement=password; break;
+            case "shortName"            : myElement=shortName; break;
+            case "nameInput"            : myElement=nameInput; break;
+            case "searchInput"          : myElement=searchInput; break;
+            case "codeInput"            : myElement=codeInput; break;
+            case "locationType"         : myElement=locationType; break;
+            case "Capactiy"             : myElement=Capactiy; break;
+
+
+
+
             case "PotitionCategoriesEditInputName" : myElement=PotitionCategoriesEditInputName; break;
             case "ibanInput"                       : myElement=ibanInput; break;
             case "integrationCodeInput"            : myElement=integrationCodeInput; break;
