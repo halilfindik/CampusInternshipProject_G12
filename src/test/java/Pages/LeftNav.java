@@ -44,6 +44,12 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//*[text()='Position Categories'])[1]")
     private WebElement positionCategories;
 
+    @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")
+    private WebElement bankAccounts;
+
+    @FindBy(xpath="(//span[text()='Discounts'])[1]")
+    private WebElement discounts;
+
     @FindBy(xpath = "//*[text()='Education']")
     private WebElement education;
 
@@ -71,30 +77,54 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//span[text()='Grade Levels']")
     private WebElement gradeLevels;
 
+    @FindBy(xpath = "//*[text()='Setup']")
+    private WebElement Setup;
+
+    @FindBy(xpath = "    //*[@class='nav-link-title ng-tns-c249-9 ng-star-inserted']")
+    private WebElement SchoolSetup;
+
+    @FindBy(xpath = "//*[text()='Locations']")
+    private WebElement Locations;
+
+    @FindBy(xpath="(//span[text()='Setup'])[1]")
+    private WebElement Nationalitiessetup;
+
+    @FindBy(xpath="//span[text()='Parameters']")
+    private WebElement Natparameters;
+
+    @FindBy(xpath="//span[text()='Nationalities']")
+    private WebElement nationalitiess;
+
+
+
+
+
+
+
 
     WebElement myElement;
     public void findAndClick(String strElement) {
         switch (strElement) {
-            case "setupOne"          : myElement=setupOne; break;
-            case "parameters"        : myElement=parameters; break;
-            case "countries"         : myElement=countries; break;
-            case "setupTwo"          : myElement=setupTwo; break;
-            case "setupThree"        : myElement=setupThree; break;
-            case "humanResources"    : myElement=humanResources; break;
-            case "employees"         : myElement=employees; break;
-            case "positions"         : myElement=positions; break;
-            case "fields"            : myElement=fields; break;
-            case "documentTypes"     : myElement=documentTypes; break;
+            case "setupOne"         : myElement=setupOne; break;
+            case "parameters"       : myElement=parameters; break;
+            case "countries"        : myElement=countries; break;
+            case "setupTwo"         : myElement=setupTwo; break;
+            case "setupThree"       : myElement=setupThree; break;
+            case "humanResources"   : myElement=humanResources; break;
+            case "employees"        : myElement=employees; break;
+            case "positions"        : myElement=positions; break;
+            case "fields"           : myElement=fields; break;
+            case "documentTypes"    : myElement=documentTypes; break;
+            case "bankAccounts"     : myElement=bankAccounts; break;
+            case "discounts"        : myElement=discounts; break;
             case "education"         : myElement=education; break;
             case "setupFour"         : myElement=setupFour; break;
             case "subjectCategories" : myElement=subjectCategories; break;
             case "positionCategories": myElement=positionCategories; break;
-            case "attestations"      : myElement=attestations; break;
-            case "schoolSetup"       : myElement=schoolSetup; break;
-            case "gradeLevels"       : myElement=gradeLevels; break;
-            case "nationalities"     : myElement=nationalities; break;
-            case "departments"       : myElement=departments; break;
-            case "locations"         : myElement=locations; break;
+            case "Nationalitiessetup": myElement=Nationalitiessetup; break;
+            case "Natparameters"     : myElement=Natparameters; break;
+            case "nationalitiess"    : myElement=nationalitiess; break;
+
         }
         clickFunction(myElement);
     }
