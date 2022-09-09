@@ -222,5 +222,4 @@ public class DialogContent extends Parent {
         waitUntilStalenessAndClickFunction(myElement);
     }
 
-
 }
