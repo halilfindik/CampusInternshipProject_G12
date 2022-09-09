@@ -21,6 +21,7 @@ public class Parent {
     }
     public void clickFunction(WebElement element)
     {
+        //waitUntilStaleElement(element);
         waitUntilClickable(element);
         scrollToElement(element);
         element.click();
@@ -49,6 +50,11 @@ public class Parent {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void waitUntilStaleElement(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(Gwd.getDriver(), dr);
+        wait.until(ExpectedConditions.stalenessOf(element));
+    }
+
     public void verifyContainsText(WebElement element, String text) {
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
@@ -57,5 +63,16 @@ public class Parent {
         WebDriverWait wait = new WebDriverWait(Gwd.driver,dr);
         By fuseBar=By.cssSelector("fuse-progress-bar > *");
         wait.until(ExpectedConditions.numberOfElementsToBe(fuseBar,0));
+    }
+    public void waitUntilAllElementsLoadedFunction() {
+        WebDriverWait wait = new WebDriverWait(Gwd.driver,dr);
+        By elements=By.cssSelector("tbody[role='rowgroup']>*");
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(elements,11));
+    }
+
+    public void waitUntilStalenessAndClickFunction(WebElement element) {
+        waitUntilStaleElement(element);
+        scrollToElement(element);
+        element.click();
     }
 }

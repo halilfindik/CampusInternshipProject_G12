@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.Gwd;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -102,9 +103,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[contains(@class,'bounding')]")
     private WebElement transparentBackdrop;
 
-    @FindBy(xpath = "//ms-text-field//input")
-    private WebElement PotitionCategoriesEditInputName;
-
     @FindBy(xpath = "//ms-masked-text-field[@formcontrolname='iban']//input")
     private WebElement ibanInput;
 
@@ -117,22 +115,28 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
     private WebElement numericInput;
 
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']//input")
+    private WebElement capacity;
+
+    @FindBy(xpath = "(//*[@role='combobox'])[1]")
+    private WebElement  comboBox;
+
 
     WebElement myElement;
     public void findAndSend(String strElement, String value) {
         switch (strElement)
         {
-            case "username"                        : myElement=username; break;
-            case "password"                        : myElement=password; break;
-            case "shortName"                       : myElement=shortName; break;
-            case "nameInput"                       : myElement=nameInput; break;
-            case "searchInput"                     : myElement=searchInput; break;
-            case "codeInput"                       : myElement=codeInput; break;
-            case "PotitionCategoriesEditInputName" : myElement=PotitionCategoriesEditInputName; break;
-            case "ibanInput"                       : myElement=ibanInput; break;
-            case "integrationCodeInput"            : myElement=integrationCodeInput; break;
-            case "descriptionInput"                : myElement=descriptionInput; break;
-            case "numericInput"                    : myElement=numericInput; break;
+            case "username"             : myElement=username; break;
+            case "password"             : myElement=password; break;
+            case "shortName"            : myElement=shortName; break;
+            case "nameInput"            : myElement=nameInput; break;
+            case "searchInput"          : myElement=searchInput; break;
+            case "codeInput"            : myElement=codeInput; break;
+            case "capacity"             : myElement=capacity; break;
+            case "ibanInput"            : myElement=ibanInput; break;
+            case "integrationCodeInput" : myElement=integrationCodeInput; break;
+            case "descriptionInput"     : myElement=descriptionInput; break;
+            case "numericInput"         : myElement=numericInput; break;
 
         }
         sendKeysFunction(myElement, value);
@@ -162,6 +166,7 @@ public class DialogContent extends Parent {
             case "dropDownOptionEight"  : myElement=dropDownOptionEight; break;
             case "arrowThree"           : myElement=arrowThree; break;
             case "transparentBackdrop"  : myElement=transparentBackdrop; break;
+            case "comboBox"             : myElement=comboBox; break;
         }
         clickFunction(myElement);
     }
@@ -204,6 +209,17 @@ public class DialogContent extends Parent {
             case "arrowThree" : myElement = arrowThree; break;
         }
         returnToElement(myElement);
+    }
+
+    public void waitUntilAllElementsLoaded() {
+        waitUntilAllElementsLoadedFunction();
+    }
+
+    public void waitUntilStalenessAndClick(String strElement) {
+        switch (strElement) {
+            case "arrowOne" : myElement=arrowOne; break;
+        }
+        waitUntilStalenessAndClickFunction(myElement);
     }
 
 }

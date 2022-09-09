@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.List;
@@ -33,6 +34,8 @@ public class FeatureSteps {
             dialogContent.findAndClick(listElement.get(i));
         }
     }
+
+
 
     @And("User sends the keys in the Dialog Content")
     public void userSendsTheKeysInTheDialogContent(DataTable elements) {
@@ -76,5 +79,19 @@ public class FeatureSteps {
     @And("Return to the form on the element in the Dialog Content")
     public void returnToTheFormOnTheElementInTheDialogContent() {
         dialogContent.returnToForm("arrowThree");
+    }
+
+    @When("Wait for all elements to be loaded")
+    public void waitForAllElementsToBeLoaded() {
+        dialogContent.waitUntilAllElementsLoaded();
+    }
+
+    @When("Wait until combo box to be clickable")
+    public void waitUntilComboBoxToBeClickable(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+
+        for (int i=0; i<listElement.size(); i++) {
+            dialogContent.waitUntilStalenessAndClick(listElement.get(i));
+        }
     }
 }

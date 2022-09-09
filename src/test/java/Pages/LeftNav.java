@@ -83,22 +83,28 @@ public class LeftNav extends Parent{
     WebElement myElement;
     public void findAndClick(String strElement) {
         switch (strElement) {
-            case "setupOne"           : myElement=setupOne; break;
-            case "parameters"         : myElement=parameters; break;
-            case "countries"          : myElement=countries; break;
-            case "setupTwo"           : myElement=setupTwo; break;
-            case "setupThree"         : myElement=setupThree; break;
-            case "humanResources"     : myElement=humanResources; break;
-            case "employees"          : myElement=employees; break;
-            case "positions"          : myElement=positions; break;
-            case "fields"             : myElement=fields; break;
-            case "documentTypes"      : myElement=documentTypes; break;
-            case "bankAccounts"       : myElement=bankAccounts; break;
-            case "discounts"          : myElement=discounts; break;
-            case "education"          : myElement=education; break;
-            case "setupFour"          : myElement=setupFour; break;
-            case "subjectCategories"  : myElement=subjectCategories; break;
-            case "positionCategories" : myElement=positionCategories; break;
+            case "setupOne"          : myElement=setupOne; break;
+            case "parameters"        : myElement=parameters; break;
+            case "countries"         : myElement=countries; break;
+            case "setupTwo"          : myElement=setupTwo; break;
+            case "setupThree"        : myElement=setupThree; break;
+            case "humanResources"    : myElement=humanResources; break;
+            case "employees"         : myElement=employees; break;
+            case "positions"         : myElement=positions; break;
+            case "fields"            : myElement=fields; break;
+            case "documentTypes"     : myElement=documentTypes; break;
+            case "bankAccounts"      : myElement=bankAccounts; break;
+            case "discounts"         : myElement=discounts; break;
+            case "education"         : myElement=education; break;
+            case "setupFour"         : myElement=setupFour; break;
+            case "subjectCategories" : myElement=subjectCategories; break;
+            case "positionCategories": myElement=positionCategories; break;
+            case "attestations"      : myElement = attestations; break;
+            case "schoolSetup"       : myElement=schoolSetup; break;
+            case "locations"         : myElement=locations; break;
+            case "departments"       : myElement=departments; break;
+            case "nationalities"     : myElement=nationalities; break;
+            case "gradeLevels"       : myElement=gradeLevels; break;
             case "Attestations"       : myElement=Attestations; break;
         }
         clickFunction(myElement);
