@@ -86,12 +86,9 @@ public class FeatureSteps {
         dialogContent.waitUntilAllElementsLoaded();
     }
 
-    @When("Wait until combo box to be clickable")
-    public void waitUntilComboBoxToBeClickable(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
-
-        for (int i=0; i<listElement.size(); i++) {
-            dialogContent.waitUntilStalenessAndClick(listElement.get(i));
-        }
+    @When("Wait until combo box to be clickable and click")
+    public void waitUntilComboBoxToBeClickable() {
+            dialogContent.findAndClick("comboBox");
+            dialogContent.findAndClick("dropDownOptionTwo");
     }
 }

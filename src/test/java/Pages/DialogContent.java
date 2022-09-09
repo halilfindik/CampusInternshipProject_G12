@@ -218,6 +218,7 @@ public class DialogContent extends Parent {
     public void waitUntilStalenessAndClick(String strElement) {
         switch (strElement) {
             case "arrowOne" : myElement=arrowOne; break;
+            case "comboBox" : myElement=comboBox; break;
         }
         waitUntilStalenessAndClickFunction(myElement);
     }

@@ -11,14 +11,12 @@ Feature: Add-Edit-Delete School Locations under School Setup (NoSearch)
       | schoolSetup |
       | locations   |
 
-    When Wait for all elements to be loaded
+    When Wait until combo box to be clickable and click
 
-    When Click on the element in the Dialog Content
-      | arrowTwo            |
-      | dropDownOptionEight |
-      | arrowOne            |
-      | dropDownOptionTwo   |
-      | addButton           |
+    And Click on the element in the Dialog Content
+      #| comboBox          |
+      #| dropDownOptionTwo |
+      | addButton         |
 
     And User sends the keys in the Dialog Content
       | nameInput | Warwic |
@@ -38,8 +36,8 @@ Feature: Add-Edit-Delete School Locations under School Setup (NoSearch)
       | schoolSetup |
       | locations   |
 
-    When Wait until combo box to be clickable
-      | arrowOne    |
+    When Wait until combo box to be clickable and click
+      #| arrowOne    |
 
     And Click on the element in the Dialog Content
       | dropDownOptionTwo |
