@@ -1,4 +1,4 @@
-Feature: Add-Edit-Delete Nationalities under Paremeters Setup
+Feature: Add-Edit-Delete Nationalities under Parameters Setup
 
   Background:
     Given Navigate to Campus
@@ -7,15 +7,15 @@ Feature: Add-Edit-Delete Nationalities under Paremeters Setup
 
   Scenario: Add Nationalities
     Given Click on the element in the Left Navigation Panel
-      | Nationalitiessetup    |
-      | Natparameters     |
-      | nationalitiess |
+      | setupOne      |
+      | parameters    |
+      | nationalities |
 
     When Click on the element in the Dialog Content
       | addButton |
 
     And User sends the keys in the Dialog Content
-      | nameInput | sabitt |
+      | nameInput | Salvadorlu |
 
     And Click on the element in the Dialog Content
       | saveButton |
@@ -24,16 +24,19 @@ Feature: Add-Edit-Delete Nationalities under Paremeters Setup
 
   Scenario: Edit Nationalities
     Given Click on the element in the Left Navigation Panel
-      | Nationalitiessetup |
-      | Natparameters      |
-      | nationalitiess     |
+      | setupOne      |
+      | parameters    |
+      | nationalities |
+
+    When User searches for the desired item in the Dialog Content
+      | searchInput    | Salvadorlu  |
 
     And Click on the element in the Dialog Content
-
-      | editButton   |
+      | searchButton  |
+      | editButton    |
 
     And User sends the keys in the Dialog Content
-      | nameInput | dengee |
+      | nameInput | Salvadorian |
 
     And Click on the element in the Dialog Content
       | saveButton |
@@ -42,12 +45,15 @@ Feature: Add-Edit-Delete Nationalities under Paremeters Setup
 
   Scenario: Delete Nationalities
     Given Click on the element in the Left Navigation Panel
-      | Nationalitiessetup |
-      | Natparameters      |
-      | nationalitiess     |
+      | setupOne      |
+      | parameters    |
+      | nationalities |
+
+    When User searches for the desired item in the Dialog Content
+      | searchInput    | Salvadorian  |
 
     And Click on the element in the Dialog Content
-
+      | searchButton        |
       | deleteButton        |
       | approveDeleteButton |
 

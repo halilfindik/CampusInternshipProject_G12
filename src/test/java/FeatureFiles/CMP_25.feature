@@ -1,66 +1,71 @@
-Feature: Add-Edit-Delete School Locations under School Setup
+Feature: Add-Edit-Delete School Locations under School Setup (NoSearch)
 
   Background:
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
 
-  Scenario: Add Lacotions
+  Scenario: Add Locations
     Given Click on the element in the Left Navigation Panel
-      | Setup    |
-      | SchoolSetup     |
-      | Locations |
+      | setupOne    |
+      | schoolSetup |
+      | locations   |
+
+    When Wait for all elements to be loaded
 
     When Click on the element in the Dialog Content
-      | addButton |
+      | arrowTwo            |
+      | dropDownOptionEight |
+      | arrowOne            |
+      | dropDownOptionTwo   |
+      | addButton           |
 
     And User sends the keys in the Dialog Content
-      | nameInput | Ravza |
-      | shortName | 2661  |
+      | nameInput | Warwic |
+      | shortName | WRC    |
 
-      And Click on the element in the Dialog Content
-      | locationType |
-
-      And User sends the keys in the Dialog Content
-
-      | Capactiy | 26612661 |
-
-
+    And User sends the keys in the Dialog Content
+      | capacity | 85 |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Edit Lacotions
+  Scenario: Edit Locations
     Given Click on the element in the Left Navigation Panel
-      | Setup    |
-      | SchoolSetup     |
-      | Locations |
+      | setupOne    |
+      | schoolSetup |
+      | locations   |
 
-
+    When Wait until combo box to be clickable
+      | arrowOne    |
 
     And Click on the element in the Dialog Content
+      | dropDownOptionTwo |
 
+    And Click on the element in the Dialog Content
+      | searchButton |
       | editButton   |
 
     And User sends the keys in the Dialog Content
-      | nameInput | Maziyeh |
+      | nameInput | Warwick |
 
     And Click on the element in the Dialog Content
       | saveButton |
 
     Then Success message should be displayed
 
-  Scenario: Delete Lacotions
+  Scenario: Delete Locations
     Given Click on the element in the Left Navigation Panel
-      | Setup    |
-      | SchoolSetup     |
-      | Locations |
+      | setupOne    |
+      | schoolSetup |
+      | locations   |
 
+    When User searches for the desired item in the Dialog Content
+      | searchInput    | Warwick  |
 
     And Click on the element in the Dialog Content
-
       | deleteButton        |
       | approveDeleteButton |
 
