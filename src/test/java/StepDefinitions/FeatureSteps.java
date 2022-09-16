@@ -88,7 +88,8 @@ public class FeatureSteps {
 
     @When("Wait until combo box to be clickable and click")
     public void waitUntilComboBoxToBeClickable() {
-            dialogContent.findAndClick("comboBox");
-            dialogContent.findAndClick("dropDownOptionTwo");
+        dialogContent.findAndClick("comboBox");
+            //dialogContent.findAndClick("comboBox");
+        dialogContent.findAndClick("dropDownOptionTwo");
     }
 }

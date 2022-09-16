@@ -2,9 +2,7 @@ package Pages;
 
 import Utilities.Gwd;
 import junit.framework.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -47,8 +45,18 @@ public class Parent {
 
     public void waitUntilClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Gwd.getDriver(), dr);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        for (int i=0; i<2; i++) {
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+            }
+            catch (StaleElementReferenceException e) {
+                //PageFactory.initElements(driver, this);
+                //wait.until(ExpectedConditions.elementToBeClickable(element));
+            }
+        }
     }
+
+
 
     public void waitUntilStaleElement(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Gwd.getDriver(), dr);
